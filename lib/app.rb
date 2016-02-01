@@ -13,7 +13,13 @@ get '/another' do
   'can you read me?'
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = %w(Felix Keith Burt).sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
