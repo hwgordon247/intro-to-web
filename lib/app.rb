@@ -14,5 +14,6 @@ get '/another' do
 end
 
 get '/cat' do
-    erb(:index)
+  @name = %w(Felix Keith Burt).sample
+  erb(:index)
 end
